@@ -49,6 +49,10 @@
       background-color: black
     }
 
+    html, body {
+  overflow-x:hidden
+}
+
     #wrapper{
     position: relative;
 }
@@ -124,8 +128,8 @@
 .marquee-with-options,
 .marquee-vert-before,
 .marquee-vert {
-  width: 100%;
-  height: 90%;
+  width: 100vw;
+  height: 90vh;
   overflow: hidden;
   position: relative;
   white-space: nowrap;
@@ -220,12 +224,23 @@ h1 {
   padding-bottom: 40px;
 }
 
-.col-2 {
+.col-sm-2 {
   text-align: center;
   color: white;
+  font-size: 16px;
 }
 
+.intro {
+  max-width: 40vw;
+  position: relative;
+  background-color: black !important;
+  color: white
+}
 
+.introflex {
+padding-top: 30vh;
+padding-bottom: 30vh;
+}
 .container {
   position: relative;
   width: 36%;
@@ -244,6 +259,16 @@ span {
   font-size: 15px !important;
   font-weight: normal !important;
   background: rgba(white,.5) !important;
+}
+
+
+[aos="fade"] {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+[aos="fade"].aos-animate {
+  opacity: 1;
 }
 
 
@@ -298,9 +323,9 @@ h4 {
 
 
 p {
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
-  padding: 0 15px;
+  padding: 0 10px;
   margin-bottom: 1em;
   font-family: 'Gelasio', serif;
   font-size: 1.3em;
@@ -324,7 +349,7 @@ section > * {
   flex: 1;
 }
 article {
-  padding: 0 1rem;
+  padding: 0 0.5rem;
 }
 
 @media screen and (min-width: 35rem) {
@@ -352,6 +377,90 @@ figure {
     position: sticky;
  }
 }
+
+
+
+
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1366px)  {
+
+  h1 {
+font-size: 4em
+
+  }
+
+  #logo {
+    left: 56%
+  }
+
+
+  .container img {
+    width: 100%;
+  }
+
+  .container {
+    width: 60%;
+  }
+
+  .col-sm-2 {
+    font-size: 12px;
+  }
+
+}
+
+
+
+
+/* iphone */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 767px){
+  #logo {
+    left: 58%
+  }
+
+  h1 {
+    font-size: 1.7em;
+  }
+
+
+  h5 {
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 1.0em;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5rem;
+  }
+
+  article {
+    width: 100%
+    padding: none;
+  }
+
+  figure {
+    position: sticky;
+    width: 40%;
+    height: 10rem;
+ }
+
+  .container {
+    width: 100%;
+  }
+
+  p {
+    max-width: 100vw;
+    font-size: 0.7em;
+}
+
+}
   </style>
   </head>
   <body>
@@ -371,872 +480,872 @@ figure {
 
 
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Brian Dill Sr.
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Bill Barton
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Terry Henderson
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Franklin Ross
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Tanisha Cotton
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Samuel Stone
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Alice Jett
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Virgil Sinkey
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Frances Jansen
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           DeVonte Sargent
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Patricia Jacuzzi
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Billy Joe Hillburn
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Peggy Tyner
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Delores Whitehead
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Joel DuBose
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Mary Blount
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Rodney Cottrell
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Shelley York
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Shirley Rodriguez
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Julia Christian
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Richard Richardson
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Lee Oakley
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Norma Jean Smith
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Loren Cuffel
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Patti Harris
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Eddie Tank
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Larry Earnhart
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Willadeen Glover
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Andy Jackson
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Harry Drabelle
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           William Campbell
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Mae Lewellen
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Beverly Reep
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Lois Ashcraft-Merrell
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Gerald (Bruce) Lawson
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Sober Jieta
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Joy McNeely
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Anastacia Benitez
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Doris Johnson
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Betty Ellenburger
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Phillip Cate
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Carroll Covington
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           A'Duwa Giddens
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Carl Lee "C.L." Williams
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Patricia Goines
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Arthur McDowell
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Anita Gullett
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Kathryn Council
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Doris Bitner
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Deborah Morris
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Zelma Hanson
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Mildred Baldridge
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Annie Little-Solomon
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Patricia "Pat" Layton
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Larry Hamblen
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Mary Davenport
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Vivian Hensley
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Lillie Carroll
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Danny Woods
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Derick Coley
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Ronnie West
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Charlie Alston
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Wendell Leckbee
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Kenneth Oden
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Jeanne Kelley
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           John Young
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Annie Washington
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Raymond Pennington
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Stacy Dickerson
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Hope Griffin
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Betty Hill
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Roy Davis
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Michael Williams
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Alvin Mitchell
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Wanda Hill
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Michael "Mike" Fox
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Helga McClean
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Morris Davis
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Jimmy "Jim" Handy
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Freddie Stuart
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Opal Parmenter
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Eolik Mohang
         </div>
-        <div class="col-2">
-          Norman "Norm" Moyer
+        <div class="col-sm-2">
+          Norman "Norm" <br>Moyer
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Robert Burmingham
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Alexander Taleff
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Odessa Fountain
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           James Pattillo
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           James Millsap
         </div>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Henrietta Haynes
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Emma Allensworth
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Christopher Moore
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Connie Taylor
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Rafeeq Ali
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Mary King
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Betty Couch
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Annie Tims
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Norma Campbell
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Ora Davis
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Evelyn Blain
         </div>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           William Tanton
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Ethel Morant
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Myra Nelson
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Murjel Tarkwon
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Ima White
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Jim Wilson
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Stella Gentry
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Jimmy White
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Wanda Willett
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Peter Anitok
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Michael Blain
         </div>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Jose Serrano
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Ida Smith
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Timothy Richey
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Joe Wigner
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Johnsay Enos
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Peggy Shores
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Howard Burton
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Nancy Burlee
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Nina Kennedy
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Tamar Bohamny
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Jennie Martindale
         </div>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Larry Akins
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           T'Essence Turner
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Botta Kakin
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Steve Rogers
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Lila Wena
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Irene Marshal
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Dennis Davis
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Kate Edwards
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Servando Paez
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Jearlene Waters
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Bertha Murphree
         </div>
       </div>
 
 
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           William Crawford
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Robert "Ray" Hull
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Lucia Valle de Calderon
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Jimmy Cole
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Tairik Naijo
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Richardo Ayala
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Elsie Ferreira
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Shirley Williams
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Calve Cooper
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Rose Nabu
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Nancy Dobbins
         </div>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           William "Bill" Meuser
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Carla Washington
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Kay Brewer
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Ann Heran
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Ginger Whitaker
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Virgeen Huggins
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Raymond Thomey
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Rodney Kon
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Francisco Hernandez
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Granbe Balos
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Lokar Jerion
         </div>
       </div>
 
 
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Maria Labrada
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Pansy Gastineau
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           George White
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Taiti Leo
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Victoriano Rosas-Aparicio
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Drile Limkary
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
           Gloria Conklin
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Robert Casali
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Ajanaku Kiambiroir
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           William Ray
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
           Sealalf Relech
         </div>
       </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Gloria Medina
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Lillie Gilmore
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Charles Martin
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Aaron Rithen
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Bettye Stillions
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Vernelia Schoessel
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Lois Kellebrew
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Mary Scheele
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Allan Peletz
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Charles McGill
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Mozella Barber
               </div>
             </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Ronald Carmichael
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Jorge Barahona
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Andrew Liki
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Bernardino Castillo
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Risen Zeckrea
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Louise Gatewood
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Elizabeth Sherman
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Lorie Williamson
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Dorothy Murry
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Motto Akeke
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Ivana Lomato
               </div>
             </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Harold Johnson
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Logan Reed
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Pearline Washington
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Manuel Ramirez
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Macario Salas
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Marjorie Wooten
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Juanita Hill
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Anter Laivwij
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Roy Scheider
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Paulina Lakabung
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Biram Tokjen
               </div>
             </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Ruby Smith
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Hazel Floyd
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Bobby May
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Kimberlyn Ria
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Hehkbi Binejal
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Euvanell Pratt
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Helen Holt
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Norma Howell
               </div>
-              <div class="col-2">
-                Viensong Phanphengdee
+              <div class="col-sm-2">
+                Viensong <br>Phanphengdee
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Timoteo Gonzalez
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Mable Neeley
               </div>
             </div>
 
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Hermie George
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Jolikiep Joran
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Odilia Castillo
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 William Burse
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Atline Joseph
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Kathleen Almeda
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Charlene Blevins
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Helen McGarrah
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Tomar Samuel
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Erma Beckley
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Anthony Katlong
               </div>
             </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Arthur Riley
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Franklin Henos
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Antonio Chonggum
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Raul Camacho
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Teresa Holt
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Johnie Douthit
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 David Estradadudino
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 David Jerde
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Michael Buonaiuto
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Don Hall
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Leona Billingsley
               </div>
             </div>
 
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Lowell Titus
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Danny Ria
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Roy Blackburn
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 John Lekjab
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Mattie Grant
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Peter Ugwu
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Charley Rodgers
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Emmett Eads
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 John Dillon
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Eugenia Green
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Placido Arrue
               </div>
             </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Charlotte Hickey
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Dickie Wilson
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Miana Lajwi
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Jimmy Frost
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Ann Beth Wisner
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Charles Burns
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Roy Yates
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Jimmy Lawrence
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Rosa Reyes
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Charles Smith
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Mack Giles
               </div>
             </div>
@@ -1245,348 +1354,350 @@ figure {
 
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Nelda Jane Long
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Maria Umana
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Alice Ferguson
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Khammy Nothongkham
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Tommy Tackett
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Tommy Clevenger
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Juan Gonzalez
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Letha Wade
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Barba Swartz
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Vera Banks
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Albert DeMarco
               </div>
             </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Robert Newton
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 William Chaney
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 William Wooldridge
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Doris Mason
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Olga Rua
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Henry Strahan Jr.
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Soutchai Vongsanith
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Bobby Bounds
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Junior Freeman
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Lawrence Oswald
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Charles Sibley
               </div>
             </div>
 
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Eddie Goodlow
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 William Austin
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 John L. Boyd
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Irene Hawkins
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Sara Hill
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Ketty Torrelik
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Kenneth Payne
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Paul Fuller
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Charles Johnson
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Richard Steuber
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Thomas Hodges
               </div>
             </div>
 
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 James Allen
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Patti Rainwater
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Bonnie McCarthy
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Richard Trammell
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Joseph Spears
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Patsy Daniels
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Bobby Stubbs
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Michael Wells
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Molly Timmons
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Joyah Flemister
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Nancy Coleman
               </div>
             </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Crecencianado Lopez
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Serafin Martinez
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Glyn Higdon
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Santiago Navarrete
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Billy Cannon
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Anthony Crest
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 William Upton
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Gloria Henderson
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Jilly Dribo
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Adelbert Laukon
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Loise Bean
               </div>
             </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Patsy Turner
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Rachel Taylor
               </div>
-              <div class="col-2">
-                Char Kulgavchuk-Crooker
+              <div class="col-sm-2">
+                Char <br>Kulgavchuk-Crooker
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Raymond Featherfield
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Linda Anderson
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Patricia Sanders
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Elva Goodman
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Dorothy Carroll
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Walter Stone
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Clarence Allen
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Richard Mau
               </div>
             </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Stanley Williams
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Emmanuel Young
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Lois Hirst
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Herman Ginger
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Rebecca Van Gaale
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Ricardo Medina
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Elsie Prewitt
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Judy Trimble
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Moskasi Lewis
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Frank Stratton
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Kathleen Pointer
               </div>
             </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Dora Prieto
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Dorothy Seamans
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Paul Ciavarelli
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Miguel Malara
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Royce Daniels
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Joyce Johnson
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Joshua Handley Jr.
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Robert Bennett
               </div>
-              <div class="col-2">
-                Raymundo Villalobos-Rodriguez
+              <div class="col-sm-2">
+                Raymundo <br>Villalobos-Rodriguez
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Wanda Byrd
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Allene Hubbard
               </div>
             </div>
 
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Lawrence Paul Ladd Jr.
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Norman Harless Jr.
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Mickey Credit
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Maximino Ramos-Reyes
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Blanche King
               </div>
-              <div class="col-2">
-                Vanna Kongmanivong
+              <div class="col-sm-2">
+                Vanna <br>Kongmanivong
               </div>
             </div>
             <div class="row justify-content-center">
-              <div class="col-2">
+              <div class="col-sm-2">
                 Jackie Ethridge
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Danielle Irish
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Vivian Dowdy
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Hurley Berry
               </div>
-              <div class="col-2">
+              <div class="col-sm-2">
                 Edward Brooks
               </div>
             </div>
+            <div class="spacer" style="padding: 40vh;"></div>
+
     </div>
   </div>
   </div>
@@ -1601,13 +1712,20 @@ figure {
     <!-- <span class="text">Scroll down</span> -->
   </div>
 
-  <div class="spacer" style="padding: 20vh;"></div>
+
+  <div class="d-flex justify-content-center introflex">
+  <div class="alert alert-dark intro" role="alert">
+    Deaths tied to the covid-19 global pandemic are no longer rare in Arkansas.<br></br>
+
+    At least 1,684 state residents have died from the virus in less than seven months; 371 in September alone, according to the Arkansas Department of Health.<br></br>
+
+    The numbers merely hint at the toll. This Arkansas Democrat-Gazette occasional series, "Lives Remembered," focuses on the stories of a few who fought covid-19 and lost their lives.
+  </div>
+</div>
 
 
 
-
-
-  <section>
+  <section data-aos="fade" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
 
     <figure>
 
@@ -2039,8 +2157,17 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
 
     </section>
 
-    <div class="spacer" style="padding: 15vh;"></div>
+    <div class="d-flex justify-content-center introflex">
+    <div class="alert alert-dark intro" role="alert">
+      Deaths tied to the covid-19 global pandemic are no longer rare in Arkansas.<br></br>
 
+      At least 1,684 state residents have died from the virus in less than seven months; 371 in September alone, according to the Arkansas Department of Health.<br></br>
+
+      The numbers merely hint at the toll. This Arkansas Democrat-Gazette occasional series, "Lives Remembered," focuses on the stories of a few who fought covid-19 and lost their lives.<br></br>
+
+      Design and development by Yutao Chen
+    </div>
+  </div>
     <div class="d-flex justify-content-center">
 
     <form>
@@ -2080,6 +2207,10 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
     <script type="text/javascript">
+
+        AOS.init();
+
+        AOS.refresh();
 
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-35445143-1']);
@@ -2135,7 +2266,7 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
             , //true or false - should the marquee be duplicated to show an effect of continues flow
             duplicated: false
             , //speed in milliseconds of the marquee in milliseconds
-            duration: 2000
+            duration: 2500
             , //gap in pixels between the tickers
             gap: 0
             , //on cycle pause the marquee
