@@ -47,7 +47,7 @@
 
     body {
       background-color: black;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-x: hidden !important; /* Hide horizontal scrollbar */
 }
 
     #wrapper{
@@ -374,11 +374,6 @@ figure {
 and (min-device-width : 768px)
 and (max-device-width : 1366px)  {
 
-  ::-webkit-scrollbar:horizontal {
-      width: 0px;  /* Remove scrollbar space */
-      background: transparent;  /* Optional: just make scrollbar invisible */
-  }
-
   h1 {
 font-size: 4em
 
@@ -387,7 +382,6 @@ font-size: 4em
   #logo {
     left: 56%
   }
-
 
   .container img {
     width: 100%;
@@ -404,16 +398,30 @@ font-size: 4em
 }
 
 
-
-
 /* iphone */
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 767px){
 
-  ::-webkit-scrollbar:horizontal {
-      width: 0px;  /* Remove scrollbar space */
-      background: transparent;  /* Optional: just make scrollbar invisible */
+  .marquee,
+  .marquee-with-options,
+  .marquee-vert-before,
+  .marquee-vert {
+    width: 100vw;
+    height: 75vh;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    padding-top: 450px;
+    /* border:1px solid #ccc; */
+  }
+  .chevron {
+    position: absolute;
+    width: 13px;
+    height: 3px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
   }
 
   #logo {
@@ -451,6 +459,10 @@ and (max-device-width : 767px){
 
   .container {
     width: 100%;
+  }
+
+  .col-sm-2 {
+    font-size: 12px;
   }
 
   p {
@@ -2261,7 +2273,7 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
             , //true or false - should the marquee be duplicated to show an effect of continues flow
             duplicated: false
             , //speed in milliseconds of the marquee in milliseconds
-            duration: 2500
+            duration: 2700
             , //gap in pixels between the tickers
             gap: 0
             , //on cycle pause the marquee
@@ -2274,18 +2286,6 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
       });
 
 
-
-      $(function() {
-
-    var $body = $(document);
-    $body.bind('scroll', function() {
-        // "Disable" the horizontal scroll.
-        if ($body.scrollLeft() !== 0) {
-            $body.scrollLeft(0);
-        }
-    });
-
-});
     </script>
 
   </body>
