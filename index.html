@@ -46,8 +46,9 @@
     <style>
 
     body {
-      background-color: black
-    }
+      background-color: black;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 
     #wrapper{
     position: relative;
@@ -245,7 +246,7 @@ padding-bottom: 30vh;
 
 /* resize images */
 .container img {
-    width: 90%;
+    width: 80%;
     height: auto;
     display: block;
 }
@@ -353,7 +354,7 @@ figure {
   align-items: center;
   align-self: flex-start;
   display: flex;
-  height: 25rem;
+  height: 30rem;
   margin: 0;
   width: 50%;
   justify-content: center;
@@ -372,6 +373,12 @@ figure {
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1366px)  {
+
+  ::-webkit-scrollbar:horizontal {
+      width: 0px;  /* Remove scrollbar space */
+      background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+
   h1 {
 font-size: 4em
 
@@ -393,6 +400,7 @@ font-size: 4em
   .col-sm-2 {
     font-size: 12px;
   }
+
 }
 
 
@@ -402,6 +410,12 @@ font-size: 4em
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 767px){
+
+  ::-webkit-scrollbar:horizontal {
+      width: 0px;  /* Remove scrollbar space */
+      background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+
   #logo {
     left: 58%
   }
@@ -441,7 +455,7 @@ and (max-device-width : 767px){
 
   p {
     max-width: 100vw;
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 
 }
@@ -2258,6 +2272,20 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
             startVisible: false
           });
       });
+
+
+
+      $(function() {
+
+    var $body = $(document);
+    $body.bind('scroll', function() {
+        // "Disable" the horizontal scroll.
+        if ($body.scrollLeft() !== 0) {
+            $body.scrollLeft(0);
+        }
+    });
+
+});
     </script>
 
   </body>
