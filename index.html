@@ -3,7 +3,7 @@
         <script src="//cdn.blueconic.net/wehco.js"></script>
         <meta charset="utf-8">
         <title>Lives Remembered</title>
-        <link rel="icon" type="image/png" href="https://s3.amazonaws.com/new_videos/multimedia_assets/children_in_peril/favicon.png">
+        <link rel="icon" type="image/png" href="deaths.png">
         <meta name="author" content="Yutao Chen" />
         <meta name="description" content="Arkansas child gun-death rate among nation's 10 highest. Toddler Tacari Briggs was one of the youngest." />
         <meta name="keywords" content="Arkansas" />
@@ -41,12 +41,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Gelasio|Roboto:ital,wght@1,100;0,400;1,500|Courier+Prime:wght@400;700&EB+Garamond:ital@1display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 
     <style>
 
     body {
-      background-color: black;
+      background-color: #1C1C1C;
+  overflow-x: hidden !important; /* Hide horizontal scrollbar */
+}
+
+html {
   overflow-x: hidden !important; /* Hide horizontal scrollbar */
 }
 
@@ -204,7 +211,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, transparent 80%, black 100%);
+  background: linear-gradient(to bottom, transparent 80%, #1C1C1C 100%);
 }
 
 .marquee-vert:after {
@@ -214,7 +221,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, transparent 80%, black 100%);
+  background: linear-gradient(to top, transparent 80%, #1C1C1C 100%);
 }
 
 .row {
@@ -229,7 +236,7 @@ h1 {
 .intro {
   max-width: 40vw;
   position: relative;
-  background-color: black !important;
+  background-color: #1C1C1C !important;
   color: white
 }
 
@@ -238,19 +245,33 @@ padding-top: 30vh;
 padding-bottom: 30vh;
 }
 
-.container {
+#searchbox {
+  padding-bottom: 20vh;
+}
+
+/* .container {
   position: relative;
   width: 36%;
   height: 100%;
-}
+} */
 
 /* resize images */
 .container img {
-    width: 80%;
+    width: 100%;
     height: auto;
-    display: block;
+    /* display: block; */
 }
 
+.container {
+  width: 80vw;
+  padding-bottom: 80px;
+}
+
+.nameimagecontainer {
+  margin: 0 0 5vh 8vw;
+  width: 25%;
+  height: auto;
+}
 
 span {
   font-size: 15px !important;
@@ -310,7 +331,7 @@ h4 {
 }
 
 
-p {
+/* p {
   max-width: 700px;
   margin: auto;
   padding: 0 10px;
@@ -318,18 +339,27 @@ p {
   font-family: 'Gelasio', serif;
   font-size: 1.3em;
   color: white
+} */
+
+p {
+  max-width: 50vw;
+  margin: auto;
+  padding: 0 10px;
+  margin-bottom: 1em;
+  font-family: 'Gelasio', serif;
+  font-size: 1.25em;
+  color: white;
 }
 
 
 section {
   display: flex;
   flex-direction: column;
-  margin-bottom: 5rem;
-  padding-bottom: 20vh;
+  margin-bottom: 10vh;
 }
 
 
-@media screen and (min-width: 35rem) {
+/* @media screen and (min-width: 35rem) {
   section {
     flex-direction: row;
  }
@@ -355,7 +385,7 @@ figure {
   align-items: center;
   align-self: flex-start;
   display: flex;
-  height: 30rem;
+  height: 25rem;
   margin: 0;
   width: 50%;
   justify-content: center;
@@ -365,7 +395,7 @@ figure {
   figure {
     position: sticky;
  }
-}
+} */
 
 
 
@@ -384,16 +414,27 @@ font-size: 4em
     left: 56%
   }
 
-  .container img {
+  /* .container img {
     width: 100%;
-  }
+  } */
 
-  .container {
-    width: 60%;
-  }
+  /* .container {
+    width: 100%;
+  } */
 
   .col-sm-2 {
     font-size: 12px;
+  }
+
+  html {overflow-x: hidden;
+  }
+
+  .intro {
+    max-width: 60vw;
+  }
+
+  p {
+    max-width: 70vw;
   }
 
 }
@@ -403,6 +444,7 @@ font-size: 4em
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 767px){
+
 
   .marquee,
   .marquee-with-options,
@@ -416,6 +458,17 @@ and (max-device-width : 767px){
     padding-top: 450px;
     /* border:1px solid #ccc; */
   }
+
+
+  .intro {
+    max-width: 90vw;
+    position: relative;
+    background-color: #1C1C1C !important;
+    color: white;
+    font-size: 0.8em;
+  }
+
+
   .chevron {
     position: absolute;
     width: 13px;
@@ -439,6 +492,9 @@ and (max-device-width : 767px){
 
   h4 {
     font-size: 1.0em;
+  }
+
+  html {overflow-x: hidden;
   }
 
   section {
@@ -467,7 +523,7 @@ and (max-device-width : 767px){
   }
 
   p {
-    max-width: 100vw;
+    max-width: 80vw;
     font-size: 0.8em;
 }
 
@@ -3006,8 +3062,6 @@ and (max-device-width : 767px){
   </div>
 </div>
 
-
-
   <div class="scroll">
     <div class="chevron"></div>
     <div class="chevron"></div>
@@ -3021,261 +3075,266 @@ and (max-device-width : 767px){
 
     At least 1,684 state residents have died from the virus in less than seven months; 371 in September alone, according to the Arkansas Department of Health.<br></br>
 
-    The numbers merely hint at the toll. This Arkansas Democrat-Gazette occasional series, "Lives Remembered," focuses on the stories of a few who fought covid-19 and lost their lives.
+    The numbers merely hint at the toll. This Arkansas Democrat-Gazette occasional series, "Lives Remembered," focuses on the stories of a few who fought covid-19 and lost their lives.<br></br>
+
+    Find an obituary by name: &nbsp;
+
+    <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+      <option value="Roy Junior (RJ) Blackburn">Roy Junior (RJ) Blackburn</option>
+      <option value="Violet Lawson">Violet Lawson</option>
+      <option value="Juan Palacios">Juan Palacios</option>
+      <option value="John Dillon">John Dillon</option>
+      <option value="Clint Watson II">Clint Watson II</option>
+      <option value="Mack Giles Sr.">Mack Giles Sr.</option>
+      <option value="Roy Lee">Roy Lee</option>
+      <option value="Joyah Flemister">Joyah Flemister</option>
+      <option value="Irene Hawkins">Irene Hawkins</option>
+      <option value="Ellen Ford">Ellen Ford</option>
+      <option value="Bruce Hutcheson">Bruce Hutcheson</option>
+      <option value="Ester Simpkins">Ester Simpkins</option>
+      <option value="Don Weeks">Don Weeks</option>
+      <option value="Charles Sibley">Charles Sibley</option>
+      <option value="Albert DeMarco">Albert DeMarco</option>
+      <option value="John Louis Berry Sr.">John Louis Berry Sr.</option>
+      <option value="Rosie Holmes">Rosie Holmes</option>
+      <option value="Jimmy Horn<">Jimmy Horn</option>
+      <option value="Rosie Holmes">Rosie Holmes</option>
+      <option value="Dorothy Henderson">Dorothy Henderson</option>
+      <option value="Rev. Robert Floyd Jr.">Rev. Robert Floyd Jr.</option>
+      <option value="Elizabeth Hendricks">Elizabeth Hendricks</option>
+      <option value="Mary Ruth House">Mary Ruth "Sissy" House</option>
+      <option value="Linda Joyce Pledger">Linda Joyce Pledger</option>
+
+    </select>
   </div>
 </div>
 
-  <section>
-    <figure>
-          <div class="container">
-            <h5>Roy Junior (RJ) Blackburn</h5>
-            <h4>66, Charleston</h4>
-            <img src="Roy Junior (RJ) Blackburn.JPG" alt="Responsive image">
-          </div>
-    </figure>
-    <article>
-      <p>"Everyone liked RJ. If you met him, you knew why. He was kind, gentle, patient, and a great listener," according to the obituary written by his daughter, Ashley Deen.<br></br>
-      "He could find a silver lining in the darkest cloud and show you how to see it, too. He gave the best hugs, like each might be his last. He fried the tastiest catfish you'd ever eat. He loved with his whole heart, just like his mama."<br></br>
-      Blackburn, who had worked as a logger and a farmer, was a resident at Greenhurst Nursing Center in Charleston when he was hospitalized in Clarksville with an unrelated medical problem, his daughter said.<br></br>
-      The widower and father of two tested positive for covid-19 in that hospital, but showed no symptoms.<br></br>
-      "He tested positive on a Thursday," Deen said. "They called Sunday and said he was still asymptomatic. Then they called Monday and said, 'something is very wrong. We'll have to intubate him. And he'll have to be life-flighted to St. Vincent's in Little Rock." Blackburn was transferred June 23, diagnosed with covid-19 and pneumonia, according to a coroner's report.<br></br>
-      Doctors at CHI St. Vincent Infirmary called daily with treatment plans, Deen said. But July 1, they said his vital signs were deteriorating, and they didn't expect him to live through the day.<br></br>
-      Even if the hospital could have let her look through a window to say goodbye, Deen couldn't have been there.<br></br>
-      During his illness, she and two of her daughters, who live in Hackett near Fort Smith, also tested positive and were ill and quarantined with covid-19. They contracted the virus separately from her father. They have recovered.<br></br>
-    </p>
-    </article>
-  </section>
+
+<section>
+    <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-bottom" data-aos-duration="1000">
+      <div class="nameimagecontainer">
+      <h5 id="rj">Roy Junior (RJ) Blackburn</h5>
+      <h4>66, Charleston</h4>
+      <img src="Roy Junior (RJ) Blackburn.JPG">
+    </div>
+    <p>"Everyone liked RJ. If you met him, you knew why. He was kind, gentle, patient, and a great listener," according to the obituary written by his daughter, Ashley Deen.<br></br>
+    "He could find a silver lining in the darkest cloud and show you how to see it, too. He gave the best hugs, like each might be his last. He fried the tastiest catfish you'd ever eat. He loved with his whole heart, just like his mama."<br></br>
+    Blackburn, who had worked as a logger and a farmer, was a resident at Greenhurst Nursing Center in Charleston when he was hospitalized in Clarksville with an unrelated medical problem, his daughter said.<br></br>
+    The widower and father of two tested positive for covid-19 in that hospital, but showed no symptoms.<br></br>
+    "He tested positive on a Thursday," Deen said. "They called Sunday and said he was still asymptomatic. Then they called Monday and said, 'something is very wrong. We'll have to intubate him. And he'll have to be life-flighted to St. Vincent's in Little Rock." Blackburn was transferred June 23, diagnosed with covid-19 and pneumonia, according to a coroner's report.<br></br>
+    Doctors at CHI St. Vincent Infirmary called daily with treatment plans, Deen said. But July 1, they said his vital signs were deteriorating, and they didn't expect him to live through the day.<br></br>
+    Even if the hospital could have let her look through a window to say goodbye, Deen couldn't have been there.<br></br>
+    During his illness, she and two of her daughters, who live in Hackett near Fort Smith, also tested positive and were ill and quarantined with covid-19. They contracted the virus separately from her father. They have recovered.<br></br>
+  </p>
+    </div>
+</section>
 
 
-  <section>
-    <figure>
-          <div class="container">
-            <h5>Violet Lawson</h5>
-            <h4>76, Jasper</h4>
-            <img src="Violet Lawson.JPG" alt="Responsive image">
-          </div>
-    </figure>
-    <article>
-      <p>The Murray native and mother of three sang country music, and played guitar and bass with "The Blue Eagles" band, according to her son Toby Roland.<br></br>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="violetlawson">Violet Lawson</h5>
+          <h4>76, Jasper</h4>
+          <img src="Violet Lawson.JPG" alt="Responsive image">
+        </div>
+    <p>The Murray native and mother of three sang country music, and played guitar and bass with "The Blue Eagles" band, according to her son Toby Roland.<br></br>
 In her late 40s, she made two CDs in Nashville and talked with singing legend Porter Wagoner about getting into the business. Wagoner warned about the difficulties of starting relatively late in life, so she and her husband returned to Arkansas and happily played with their band in local Elk Lodges, churches and clubs.<br></br>
 Roland said the staff at Newton County Nursing Home told him this summer that she was ill, but he didn't know that the facility had any covid-19 cases.<br></br>
 After her death, he learned that the cause was "pneumonia as a consequence of covid-19." He soon heard a news report that the nursing home had reported dozens of cases of the virus. He wishes he had known sooner. "We could have decided whether to take her out or leave her there," he said.<br></br>
 "She was so kindhearted and giving," her son said. "If it's a good mother, you just can't say enough good things about her. She was religious, and loved music and family and people."<br></br>
-    </p>
-    </article>
-  </section>
+  </p>
+</div>
+</section>
 
 
-
-
-
-  <section>
-    <figure>
-          <div class="container">
-            <h5>Juan Palacios</h5>
-            <h4>86, Siloam Springs</h4>
-            <img src="Juan Palacios.JPG" alt="Responsive image">
-          </div>
-    </figure>
-    <article>
-      <p>
-        The native of El Salvador moved to Washington state in February where one of his sons lived, according to another son, Jose Palacios Calderon of Springdale.<br></br>
-        But Washington weather was too cold. So Palacios, a father of nine, moved in April to Siloam Springs and was "relieved" to find the climate more like El Salvador's, his son said.<br></br>
-        In El Salvador, Palacios spent many years as a coffee plantation foreman. When he became too old, he worked his own land growing coffee beans. In Arkansas, he stayed busy caring for grandchildren, nieces and nephews, according to his son. He liked to play the guitar and sing, but didn't dance because his church didn't approve.<br></br>
-        Palacios is believed to have contracted the covid-19 virus during a visit from a niece who worked at a poultry plant, his son said. He tested positive July 3, according to a Benton County coroner's report.<br></br>
-        A diabetic whose illness wasn't well-controlled, Palacios was more vulnerable to the virus than healthier people, doctors told the family. He developed fluid in his lungs, his son said. His wife and son Jose also were infected with the virus, but survived.<br></br>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="JuanPalacios">Juan Palacios</h5>
+          <h4>86, Siloam Springs</h4>
+          <img src="Juan Palacios.JPG" alt="Responsive image">
+        </div>
+    <p>
+The native of El Salvador moved to Washington state in February where one of his sons lived, according to another son, Jose Palacios Calderon of Springdale.<br></br>
+But Washington weather was too cold. So Palacios, a father of nine, moved in April to Siloam Springs and was "relieved" to find the climate more like El Salvador's, his son said.<br></br>
+In El Salvador, Palacios spent many years as a coffee plantation foreman. When he became too old, he worked his own land growing coffee beans. In Arkansas, he stayed busy caring for grandchildren, nieces and nephews, according to his son. He liked to play the guitar and sing, but didn't dance because his church didn't approve.<br></br>
+Palacios is believed to have contracted the covid-19 virus during a visit from a niece who worked at a poultry plant, his son said. He tested positive July 3, according to a Benton County coroner's report.<br></br>
+A diabetic whose illness wasn't well-controlled, Palacios was more vulnerable to the virus than healthier people, doctors told the family. He developed fluid in his lungs, his son said. His wife and son Jose also were infected with the virus, but survived.<br></br>
 </p>
-    </article>
-  </section>
+</div>
+</section>
 
 
-  <section>
-    <figure>
-          <div class="container">
-            <h5>John Dillon</h5>
-            <h4>79, Sherwood</h4>
-            <img src="John Dillon.JPG" alt="Responsive image">
-          </div>
-    </figure>
-    <article>
-      <p>
-        He was a bomb dog handler with the U.S. Air Force, retiring after 21 years, and helped created the drug and bomb dog unit while working the next 20 years at the Pulaski County sheriff's office. Dillon's last career was as a U.S. Marshal at the federal courthouse in Little Rock.<br></br>
-        "He was full of life, and he lived a great life," said his daughter, Melissa Bounds. "He loved telling stories of where he'd been with the military, his experience with his dogs and with criminals.<br></br>
-        "He was a strong man that everybody loved, and he never met a stranger -- a good old southern boy from McNary, Tennessee."<br></br>
-        Dillon was hospitalized May 1 with health issues unrelated to covid-19 and was sent for rehab to Woodland Hills Healthcare and Rehabilitation Center in Jacksonville. He was quarantined at first, since he had transferred from a hospital, then twice tested negative for covid-19, his daughter said.<br></br>
-        Bounds, of Nashville, Tenn., asked her father by phone to stay in his room, but he often ventured into the halls of the nursing home, she said.<br></br>
-        In early June, his daughter got a call saying Dillon was showing symptoms of the virus and had tested positive. He was taken by ambulance to Baptist Health-North Little Rock on June 5, according to a coroner's report.<br></br>
-        The widower and father of two fought the coronavirus for four weeks at the hospital. Bounds and other family members weren't allowed to visit, but were grateful that one son was allowed to suit up in personal protective gear to be with his dad as he died.<br></br>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="JohnDillon">John Dillon</h5>
+          <h4>79, Sherwood</h4>
+          <img src="John Dillon.JPG" alt="Responsive image">
+        </div>
+    <p>
+      He was a bomb dog handler with the U.S. Air Force, retiring after 21 years, and helped created the drug and bomb dog unit while working the next 20 years at the Pulaski County sheriff's office. Dillon's last career was as a U.S. Marshal at the federal courthouse in Little Rock.<br></br>
+      "He was full of life, and he lived a great life," said his daughter, Melissa Bounds. "He loved telling stories of where he'd been with the military, his experience with his dogs and with criminals.<br></br>
+      "He was a strong man that everybody loved, and he never met a stranger -- a good old southern boy from McNary, Tennessee."<br></br>
+      Dillon was hospitalized May 1 with health issues unrelated to covid-19 and was sent for rehab to Woodland Hills Healthcare and Rehabilitation Center in Jacksonville. He was quarantined at first, since he had transferred from a hospital, then twice tested negative for covid-19, his daughter said.<br></br>
+      Bounds, of Nashville, Tenn., asked her father by phone to stay in his room, but he often ventured into the halls of the nursing home, she said.<br></br>
+      In early June, his daughter got a call saying Dillon was showing symptoms of the virus and had tested positive. He was taken by ambulance to Baptist Health-North Little Rock on June 5, according to a coroner's report.<br></br>
+      The widower and father of two fought the coronavirus for four weeks at the hospital. Bounds and other family members weren't allowed to visit, but were grateful that one son was allowed to suit up in personal protective gear to be with his dad as he died.<br></br>
 </p>
-    </article>
-  </section>
+</div>
+</section>
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Clint Watson II</h5>
-              <h4>30, North Little Rock</h4>
-              <img src="Clint Watson II.JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>
-          Among Arkansas' younger victims of covid-19, Watson was a security department captain at Baptist Health-Conway.<br></br>
-          Watson's mother, Rosemary Watson, said her son started feeling sick while at work.<br></br>
-          According to a Pulaski County coroner's report, he went to Baptist Health-North Little Rock on July 19, complaining of shortness of breath and confusion. He tested positive for covid-19.<br></br>
-          Admitted to the hospital, he seemed in good condition at first but rapidly declined over the next several days.<br></br>
-          Watson graduated from the University of Arkansas at Little Rock with a degree in criminal justice and began his career in security at Baptist Health in Conway more than a decade ago, his mother said. He was engaged to be married and had three children, ages 6, 7 and 10, his mother said.<br></br>
-          "He just loved being around his family," she said. "If he wasn't with his family, he was at work."<br></br>
-  </p>
-      </article>
-    </section>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="ClintWatsonII">Clint Watson II</h5>
+          <h4>30, North Little Rock</h4>
+          <img src="Clint Watson II.JPG" alt="Responsive image">
+        </div>
+    <p>
+      Among Arkansas' younger victims of covid-19, Watson was a security department captain at Baptist Health-Conway.<br></br>
+      Watson's mother, Rosemary Watson, said her son started feeling sick while at work.<br></br>
+      According to a Pulaski County coroner's report, he went to Baptist Health-North Little Rock on July 19, complaining of shortness of breath and confusion. He tested positive for covid-19.<br></br>
+      Admitted to the hospital, he seemed in good condition at first but rapidly declined over the next several days.<br></br>
+      Watson graduated from the University of Arkansas at Little Rock with a degree in criminal justice and began his career in security at Baptist Health in Conway more than a decade ago, his mother said. He was engaged to be married and had three children, ages 6, 7 and 10, his mother said.<br></br>
+      "He just loved being around his family," she said. "If he wasn't with his family, he was at work."<br></br>
+</p>
+</div>
+</section>
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Mack Giles Sr.</h5>
-              <h4>76, Alexander</h4>
-              <img src="Mack Giles Sr..JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>
-          Giles was born in Prescott and moved to Hot Springs where he graduated from high school. At 18, he struck out to find his fortune in California and made it as far as Gary, Ind., before finding a job.<br></br>
-          He retired about three years ago and moved back to Arkansas after 42 years at U.S. Steel, where he was head electrician. He also owned an electrician business for 30 years.<br></br>
-          "He cracked jokes and loved to play with his grandkids," said his son, Mack Giles Jr. "He was a really giving guy. He took care of all the kids in the neighborhood. He was a great father. He came to every football game and track meet I had, even if he had to work double shifts just to make it there."<br></br>
-          "He did a whole lot of fishing. Crappie. He would freeze them up and eat them," Giles Jr. said. "He was still trying to find a good fishing hole here before he got sick."<br></br>
-          Giles Sr., normally energetic, became lethargic toward the end of May and didn't feel well. His son took him to Baptist Health-Little Rock on a Sunday where the elder man was treated, tested for covid-19 and released. His son called the hospital the next night and learned his father had tested positive.<br></br>
-          "Who knows where you get coronavirus?" his son said. His father had talked only about going "to some gas station and got coffee and a couple days later didn't feel good."<br></br>
-          After the positive test, his son said, he took his father back to the hospital in early June "and he never came home."<br></br>
-          Giles Sr. was treated for more than a week before being placed on a ventilator. The father of 10 was on the machine for about three weeks before he died, Giles Jr. said.<br></br>
-          Not being able to visit or communicate was difficult.<br></br>
-          "They wouldn't allow anybody up there. They need to change that," his son said. "I got to talk to him a couple of times [by phone] before they put him on a ventilator, but that was it. I don't know if he knew we were thinking about him or not when he passed."<br></br>
-  </p>
-      </article>
-    </section>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="MackGilesSr">Mack Giles Sr.</h5>
+          <h4>76, Alexander</h4>
+          <img src="Mack Giles Sr..JPG" alt="Responsive image">
+        </div>
+    <p>
+      Giles was born in Prescott and moved to Hot Springs where he graduated from high school. At 18, he struck out to find his fortune in California and made it as far as Gary, Ind., before finding a job.<br></br>
+      He retired about three years ago and moved back to Arkansas after 42 years at U.S. Steel, where he was head electrician. He also owned an electrician business for 30 years.<br></br>
+      "He cracked jokes and loved to play with his grandkids," said his son, Mack Giles Jr. "He was a really giving guy. He took care of all the kids in the neighborhood. He was a great father. He came to every football game and track meet I had, even if he had to work double shifts just to make it there."<br></br>
+      "He did a whole lot of fishing. Crappie. He would freeze them up and eat them," Giles Jr. said. "He was still trying to find a good fishing hole here before he got sick."<br></br>
+      Giles Sr., normally energetic, became lethargic toward the end of May and didn't feel well. His son took him to Baptist Health-Little Rock on a Sunday where the elder man was treated, tested for covid-19 and released. His son called the hospital the next night and learned his father had tested positive.<br></br>
+      "Who knows where you get coronavirus?" his son said. His father had talked only about going "to some gas station and got coffee and a couple days later didn't feel good."<br></br>
+      After the positive test, his son said, he took his father back to the hospital in early June "and he never came home."<br></br>
+      Giles Sr. was treated for more than a week before being placed on a ventilator. The father of 10 was on the machine for about three weeks before he died, Giles Jr. said.<br></br>
+      Not being able to visit or communicate was difficult.<br></br>
+      "They wouldn't allow anybody up there. They need to change that," his son said. "I got to talk to him a couple of times [by phone] before they put him on a ventilator, but that was it. I don't know if he knew we were thinking about him or not when he passed."<br></br>
+</p>
+</div>
+</section>
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Roy Lee</h5>
-              <h4>84, Hasty</h4>
-              <img src="Roy Lee.JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>
-          The longtime Harrison doctor was still practicing in an urgent care office when he began feeling ill in late July.<br></br>
-          "He was a wonderful, wonderful doctor and a good diagnostician," said his sister-in-law, Lyndia Lee. "And he was good to people. He would buy medicine for people and take it to them. I've had so many people tell me, 'Dr. Lee saved my life,' 'Dr. Lee sent me to a specialist who saved my life.'"<br></br>
-          A family doctor and surgeon by training, the father of three practiced in Texas before deciding to move back to the family homestead at Hasty about 25 years ago, according to his sister-in-law. His parents were still living then, and he also enjoyed working on the family ranch.<br></br>
-          He and another doctor operated a Mediquick urgent care office in Harrison. When Lee's partner decided seven or eight years ago to retire, "Roy wasn't ready to retire. He never wanted to retire," his sister-in-law said.<br></br>
-          When he started feeling sick in late July, he thought it was a flare-up of a bird flu contracted years ago. When he didn't get better, a nurse at his office said, "'Doc, let's test you for covid,' And sure enough, he had it," his sister-in-law said.<br></br>
-          No one knew whether he contracted the virus from a patient or from people he spoke with -- and often hugged -- at the grocery store and other stops around town, she said.<br></br>
-          Hospitalized about July 28, he spent almost two weeks at Washington Regional Medical Center in Fayetteville. "He really did fight. He only went on the ventilator two days before he died," his sister-in-law said. Asked by the hospital staff, "'Will you be willing to go on a ventilator?' he said, 'Yes I will, but I'm not going to have to do that.'"<br></br>
-          Throughout his life, Lee played old-time and popular tunes on the fiddle. In Texas, he had friends and acquaintances in the country music business: "Mickey Gilley, Ray Price, Willie Nelson of all people," said his sister-in-law.<br></br>
-          "He loved every morning getting up, having his coffee and reading his Bible. He loved going to the Moose Club and playing his fiddle," she said. "He was quite a fellow in every way."<br></br>
-  </p>
-      </article>
-    </section>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="RoyLee">Roy Lee</h5>
+          <h4>84, Hasty</h4>
+          <img src="Roy Lee.JPG" alt="Responsive image">
+        </div>
+    <p>
+      The longtime Harrison doctor was still practicing in an urgent care office when he began feeling ill in late July.<br></br>
+      "He was a wonderful, wonderful doctor and a good diagnostician," said his sister-in-law, Lyndia Lee. "And he was good to people. He would buy medicine for people and take it to them. I've had so many people tell me, 'Dr. Lee saved my life,' 'Dr. Lee sent me to a specialist who saved my life.'"<br></br>
+      A family doctor and surgeon by training, the father of three practiced in Texas before deciding to move back to the family homestead at Hasty about 25 years ago, according to his sister-in-law. His parents were still living then, and he also enjoyed working on the family ranch.<br></br>
+      He and another doctor operated a Mediquick urgent care office in Harrison. When Lee's partner decided seven or eight years ago to retire, "Roy wasn't ready to retire. He never wanted to retire," his sister-in-law said.<br></br>
+      When he started feeling sick in late July, he thought it was a flare-up of a bird flu contracted years ago. When he didn't get better, a nurse at his office said, "'Doc, let's test you for covid,' And sure enough, he had it," his sister-in-law said.<br></br>
+      No one knew whether he contracted the virus from a patient or from people he spoke with -- and often hugged -- at the grocery store and other stops around town, she said.<br></br>
+      Hospitalized about July 28, he spent almost two weeks at Washington Regional Medical Center in Fayetteville. "He really did fight. He only went on the ventilator two days before he died," his sister-in-law said. Asked by the hospital staff, "'Will you be willing to go on a ventilator?' he said, 'Yes I will, but I'm not going to have to do that.'"<br></br>
+      Throughout his life, Lee played old-time and popular tunes on the fiddle. In Texas, he had friends and acquaintances in the country music business: "Mickey Gilley, Ray Price, Willie Nelson of all people," said his sister-in-law.<br></br>
+      "He loved every morning getting up, having his coffee and reading his Bible. He loved going to the Moose Club and playing his fiddle," she said. "He was quite a fellow in every way."<br></br>
+</p>
+</div>
+</section>
 
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Joyah Flemister</h5>
-              <h4>38, Pine Bluff</h4>
-              <img src="Joyah Flemister.JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>
-          She worked at a Tyson Foods plant in Pine Bluff, but her grandmother said in an interview that she did not know if that was where Flemister contracted the virus.<br></br>
-          Bessie Bennett said her granddaughter did not know she had covid-19 until she was admitted to a hospital July 11 for treatment of high blood sugar.<br></br>
-          Bennett said Flemister's preexisting conditions, which included diabetes and hypertension, likely resulted in covid-19 taking a much harder toll on her body. The Jefferson County coroner's report listed the cause of death as cardiorespiratory arrest and covid-19, and said she died in the intensive care unit at Jefferson Regional Medical Center.<br></br>
-          Bennett said her granddaughter's name -- Joyah -- fit her, because she was a joy to be around and was always giving away baked goods and helping take care of her friends' children as if they were her own.<br></br>
-          She said her granddaughter was her "traveling buddy" for road trips to visit relatives in destinations such as Texas, Mississippi and Memphis. Together with Flemister's mother, who died in July 2019, they were known to friends and family as "the three amigos" because they were always together. They enjoyed shopping, going to the casino, and having dinners and get-togethers at Bennett's house.<br></br>
-          "She really cared about people, and she always met people with a smile and would do anything she could to help them," Bennett said. "She was a big-hearted person."<br></br>
-  </p>
-      </article>
-    </section>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="JoyahFlemister">Joyah Flemister</h5>
+          <h4>38, Pine Bluff</h4>
+          <img src="Joyah Flemister.JPG" alt="Responsive image">
+        </div>
+    <p>
+      She worked at a Tyson Foods plant in Pine Bluff, but her grandmother said in an interview that she did not know if that was where Flemister contracted the virus.<br></br>
+      Bessie Bennett said her granddaughter did not know she had covid-19 until she was admitted to a hospital July 11 for treatment of high blood sugar.<br></br>
+      Bennett said Flemister's preexisting conditions, which included diabetes and hypertension, likely resulted in covid-19 taking a much harder toll on her body. The Jefferson County coroner's report listed the cause of death as cardiorespiratory arrest and covid-19, and said she died in the intensive care unit at Jefferson Regional Medical Center.<br></br>
+      Bennett said her granddaughter's name -- Joyah -- fit her, because she was a joy to be around and was always giving away baked goods and helping take care of her friends' children as if they were her own.<br></br>
+      She said her granddaughter was her "traveling buddy" for road trips to visit relatives in destinations such as Texas, Mississippi and Memphis. Together with Flemister's mother, who died in July 2019, they were known to friends and family as "the three amigos" because they were always together. They enjoyed shopping, going to the casino, and having dinners and get-togethers at Bennett's house.<br></br>
+      "She really cared about people, and she always met people with a smile and would do anything she could to help them," Bennett said. "She was a big-hearted person."<br></br>
+</p>
+</div>
+</section>
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Irene Hawkins</h5>
-              <h4>92, Danville</h4>
-              <img src="Irene Hawkins.JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>
-          "I always remember her as a little, tiny old lady. But when she talked, you listened," said her granddaughter, Jennifer Hartman.<br></br>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="IreneHawkins">Irene Hawkins</h5>
+          <h4>92, Danville</h4>
+          <img src="Irene Hawkins.JPG" alt="Responsive image">
+        </div>
+    <p>
+      "I always remember her as a little, tiny old lady. But when she talked, you listened," said her granddaughter, Jennifer Hartman.<br></br>
 The widow and mother of four was a nurturer, according to her obituary. "She could always be found tending her flowers, sewing beautiful embroidery and making meals for her large family. ... Everything about her exuded comfort and love. She made every day brighter and better."<br></br>
 "She never drove. She stayed at home," Hartman said. "She loved her Grand Ole Opry and Big Macs. She was fabulous. At the end, she had dementia, but she always knew me. She was an amazing person. She deserved to be fought for."<br></br>
 Hawkins' health began to decline soon after Arkansas in March locked down nursing homes to visitors, including Mitchell's Nursing Home in Danville where Hawkins was a resident. She was hospitalized three times between March and June for treatment after a fall, dehydration and other issues, Hartman said.<br></br>
 In mid-June before her release from Chambers Memorial Hospital in Danville, Hawkins tested negative for covid-19 and returned to Mitchell's for two weeks in isolation, her granddaughter said. While there, she tested positive. A little more than two weeks later, she died.<br></br>
 Since her grandmother's death, Hartman has called state officials and nursing home watchdogs trying to learn what more can be done to protect remaining residents at Mitchell's and in other nursing homes around the state.<br></br>
-  </p>
-      </article>
-    </section>
+</p>
+</div>
+</section>
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Ellen Ford</h5>
-              <h4>80, Fayetteville</h4>
-              <img src="Ellen Ford.JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="EllenFord">Ellen Ford</h5>
+          <h4>80, Fayetteville</h4>
+          <img src="Ellen Ford.JPG" alt="Responsive image">
+        </div>
+    <p>
 The Marvell native and mother of five worked as an in-home caregiver for the sick and disabled. She also raised vegetables, and cooked and canned to feed her family, according to her daughter, Lois Glass.<br></br>
 "She grew peas, okra, tomatoes, cucumbers, greens. She didn't even like okra herself," her daughter said. Ford also grew flowers in her front yard and loved to go fishing. In addition to her children, she helped raise grandchildren and great-grandchildren.<br></br>
 Ford moved to Fayetteville in about 2016 to live with Glass. As her health declined, she moved to Fayetteville Health and Rehabilitation Center. She tested positive July 17 for covid-19 but didn't have symptoms, her daughter said. Dementia was the main contributor to her mother's death, she was told.<br></br>
 "She was the best mom, grandma, sister, auntie. She cared about her family members and was a giver," Glass said. When anyone came to visit, "she always sent them back with something" she had prepared.<br></br>
-  </p>
-      </article>
-    </section>
+</p>
+</div>
+</section>
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Bruce Hutcheson</h5>
-              <h4>63, Lowell</h4>
-              <img src="Bruce Hutcheson.JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>
-          He enjoyed camping, fishing, watching movies and spending time with family. His health was generally good -- he controlled Type 2 diabetes with diet and medication, said his son-in-law, Darren Warren.<br></br>
-          The Marine veteran worked for Community Blood Center of the Ozarks, delivering blood and plasma to hospitals in Northwest Arkansas. Though it's unknown how Hutcheson contracted covid-19, family members say it may have happened as he delivered blood and plasma.<br></br>
-          "He was wearing a mask and gloves and taking precautions," Warren said. "But he recounted an instance where a man was short of breath and about to pass out. He didn't get close, but was within the vicinity. We just don't know."<br></br>
-          In early July, Hutcheson and his wife, Aurora, both started feeling ill with dry cough, runny nose and fatigue. They went to Mercy Hospital Northwest Arkansas on July 4 with breathing problems and were diagnosed with pneumonia. They were treated and went home, Warren said.<br></br>
-          The next day, after Bruce Hutcheson's oxygen level dropped, he went back to the emergency room and tested positive for covid-19. He stayed at the hospital three days, but improved enough to go home. His wife, who also had a positive covid-19 test, was able to recover at home. On July 12, Bruce Hutcheson experienced gastrointestinal problems and, soon, breathing difficulties. He was readmitted to Mercy and given high levels of oxygen.<br></br>
-          For the next month, at Mercy and later at the VA Medical Center, Hutcheson fought the virus, sometimes gasping for air as he talked to family members by phone, Warren said.<br></br>
-          After a difficult transfer to the VA hospital on July 17, he called his daughter, April Warren, to tell her he was going on a ventilator. "He tried to keep her from getting upset," Darren Warren said. "He told her that God had told him he would live and to get all the family together to pray for him. We got the family together out in front of the VA where the flags are and prayed for him. That was the last conversation April had with her dad."<br></br>
-          "He was quite the fighter," Warren said. During Hutcheson's 26 days on a ventilator, "we thought at one point he was doing pretty good. They were going to do a tracheotomy and slowly bring him off the ventilator. But he got an infection and couldn't beat it."<br></br>
-      </article>
-    </section>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="BruceHutcheson">Bruce Hutcheson</h5>
+          <h4>63, Lowell</h4>
+          <img src="Bruce Hutcheson.JPG" alt="Responsive image">
+        </div>
+    <p>
+      He enjoyed camping, fishing, watching movies and spending time with family. His health was generally good -- he controlled Type 2 diabetes with diet and medication, said his son-in-law, Darren Warren.<br></br>
+      The Marine veteran worked for Community Blood Center of the Ozarks, delivering blood and plasma to hospitals in Northwest Arkansas. Though it's unknown how Hutcheson contracted covid-19, family members say it may have happened as he delivered blood and plasma.<br></br>
+      "He was wearing a mask and gloves and taking precautions," Warren said. "But he recounted an instance where a man was short of breath and about to pass out. He didn't get close, but was within the vicinity. We just don't know."<br></br>
+      In early July, Hutcheson and his wife, Aurora, both started feeling ill with dry cough, runny nose and fatigue. They went to Mercy Hospital Northwest Arkansas on July 4 with breathing problems and were diagnosed with pneumonia. They were treated and went home, Warren said.<br></br>
+      The next day, after Bruce Hutcheson's oxygen level dropped, he went back to the emergency room and tested positive for covid-19. He stayed at the hospital three days, but improved enough to go home. His wife, who also had a positive covid-19 test, was able to recover at home. On July 12, Bruce Hutcheson experienced gastrointestinal problems and, soon, breathing difficulties. He was readmitted to Mercy and given high levels of oxygen.<br></br>
+      For the next month, at Mercy and later at the VA Medical Center, Hutcheson fought the virus, sometimes gasping for air as he talked to family members by phone, Warren said.<br></br>
+      After a difficult transfer to the VA hospital on July 17, he called his daughter, April Warren, to tell her he was going on a ventilator. "He tried to keep her from getting upset," Darren Warren said. "He told her that God had told him he would live and to get all the family together to pray for him. We got the family together out in front of the VA where the flags are and prayed for him. That was the last conversation April had with her dad."<br></br>
+      "He was quite the fighter," Warren said. During Hutcheson's 26 days on a ventilator, "we thought at one point he was doing pretty good. They were going to do a tracheotomy and slowly bring him off the ventilator. But he got an infection and couldn't beat it."<br></br>
+    </p>
+    </div>
+</section>
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Ester Simpkins</h5>
-              <h4>94, Dumas</h4>
-              <img src="Ester Simpkins.JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>
-          Known as "Mama Chook" and "Mrs. Chook" from a childhood nickname, she told her children whenever they had a problem: "Let's pray about it."<br></br>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="EsterSimpkins">Ester Simpkins</h5>
+          <h4>94, Dumas</h4>
+          <img src="Ester Simpkins.JPG" alt="Responsive image">
+        </div>
+    <p>
+      Known as "Mama Chook" and "Mrs. Chook" from a childhood nickname, she told her children whenever they had a problem: "Let's pray about it."<br></br>
 "It used to aggravate me when I was young. I would say 'Mama, we have to do more than just pray,'" said a daughter, Glenda Hagood of Little Rock. "But I've learned as I've grown older, I realized she was saying: Let's stop, pray, consider, before we take action."<br></br>
 "Her faith was the biggest thing. She lived a life of faith."<br></br>
 As her children grew up, Simpkins loved cooking, canning and baking, especially cakes, Hagood said. Later in life, fishing became her favorite pastime.<br></br>
@@ -3284,40 +3343,38 @@ As her health deteriorated, her large family was able to take turns staying with
 In early August, Simpkins tested positive for covid-19 and stopped eating. She was admitted to Baptist Health Medical Center on Aug. 6, and was alert and responded to nurses the first few days but then began to decline.<br></br>
 "Besides her death, the hardest thing was not being able to see her and her not being able to see family," Hagood said. "She had never been away from her family. That went on for about two weeks. When we heard we were losing her, I was fortunate to get to go to the hospital and be with her."<br></br>
 Hagood said the family wants the public to know "how important it is to wear masks and do the things the CDC guidelines call for, especially when it comes to our elderly because they are so vulnerable."
-      </article>
-    </section>
+</p>
+</div>
+</section>
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Don Weeks</h5>
-              <h4>83, Little Rock</h4>
-              <img src="Don Weeks.JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>
-          The Army veteran and enthusiastic outdoorsman had a long first career that spanned banking, sales, pharmaceuticals and investments.<br></br>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="DonWeeks">Don Weeks</h5>
+          <h4>83, Little Rock</h4>
+          <img src="Don Weeks.JPG" alt="Responsive image">
+        </div>
+    <p>
+      The Army veteran and enthusiastic outdoorsman had a long first career that spanned banking, sales, pharmaceuticals and investments.<br></br>
 After retirement, he joined the staff of Arkansas Conference of the United Methodist Church, where he developed the Volunteers In Mission ministry statewide, and traveled to natural disaster sites and developing countries to provide assistance.<br></br>
 Writing about him for a church newsletter, the Rev. Maxine Allen called him "the champion of collaboration and partnerships" who "loved Philander Smith College and was strategic in helping to locate the conference offices there."<br></br>
 His wife, Brenda Weeks, described him as a "good, good man" with a need to "give back to people devastated by loss of homes, property, jobs. He took that very seriously and worked very hard."<br></br>
 Because her husband battled COPD lung problems, he was careful to follow covid-19 safety rules, his wife said.<br></br>
 Even so, he began feeling ill last month and recorded a positive test result for the virus on Aug. 11, according to a Pulaski County coroner's report. By Aug. 15, his fever up and oxygen levels down, he was admitted to Baptist Health Medical Center. "His lungs weren't strong enough to recover," his wife said.<br></br>
-      </article>
-    </section>
+</p>
+</div>
+</section>
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Charles Sibley</h5>
-              <h4>92, Helena-West Helena</h4>
-              <img src="Charles Sibley.JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="CharlesSibley">Charles Sibley</h5>
+          <h4>92, Helena-West Helena</h4>
+          <img src="Charles Sibley.JPG" alt="Responsive image">
+        </div>
+    <p>
 An Army veteran who was drafted to protect the Panama Canal Zone in the Korean War, he married his childhood sweetheart in 1949. Sibley graduated from Memphis State University and worked for J.E. Dilworth Co. calling on industries in Arkansas and Mississippi, according to his obituary. In 1955, he moved to Helena and went on to establish Sibley Supply Co.<br></br>
 A longtime school board member, he was a Phillips County Chamber of Commerce "Citizen of the Year."<br></br>
 "All who knew Charles, knew that he was an avid outdoorsman and hunter," his obituary said. "He was a founding member of the Jackson Point Hunting Club. His legacy lives on with his trophies shared among his children and grandchildren."<br></br>
@@ -3326,20 +3383,19 @@ Sibley's wife, Doris, and their three children visited him daily at the nursing 
 "He was 92 when he died. He had lived a long life, a good life. He was a good man," Campbell said. "The problem was we couldn't be with him."<br></br>
 The Sibleys opted for a family-only funeral, with almost everyone speaking about him, then gathered at the Jackson Point Hunting Club, she said.<br></br>
 "We had food and fellowship. Everywhere we looked, we knew he was in the middle of it. We did as good a job honoring him as we could under these circumstances."<br></br>
-      </article>
-    </section>
+</p>
+</div>
+</section>
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Albert DeMarco</h5>
-              <h4>91, Ozark</h4>
-              <img src="Albert DeMarco.JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>A mechanic who could fix anything, DeMarco's hobbies included flying airplanes and rebuilding damaged aircraft, according to a son, Tony DeMarco.<br></br>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="AlbertDeMarco">Albert DeMarco</h5>
+          <h4>91, Ozark</h4>
+          <img src="Albert DeMarco.JPG" alt="Responsive image">
+        </div>
+    <p>A mechanic who could fix anything, DeMarco's hobbies included flying airplanes and rebuilding damaged aircraft, according to a son, Tony DeMarco.<br></br>
 "He's flown all his life. We would go to the Midwest, and get wrecked airplanes and trailer them back to California," his son said. "He would literally put them back together, fly them, sell them, get another."<br></br>
 An Army veteran, Al DeMarco served in Korea and received a Purple Heart for shrapnel wounds. The husband and father of three moved to Arkansas from California about 30 years ago. He survived a single-engine plane crash on April 12, 2014, when he was 85. The crash happened soon after takeoff as he flew with a friend out of a Tulsa airport, according to news accounts.<br></br>
 In early June, DeMarco was hospitalized with an unrelated medical problem, his son said. Tony DeMarco and his wife, Marilyn, traveled from their Idaho home to Ozark to help. They weren't allowed to visit at the hospital. But a hospital staffer called on June 19 to release his father in an effort to protect him from covid-19 at the facility, the son said. At that time, his father had tested negative for the virus.<br></br>
@@ -3347,38 +3403,36 @@ Albert, Tony and Marilyn DeMarco stayed at the father's Ozark house, quarantined
 "My wife and I definitely had the symptoms," Tony DeMarco said. "The fatigue was the worst. You'd walk across a room and be exhausted. But my dad started to go more and more downhill. We tried to get him to move, tried to get him to eat. ... He was cold all the time, had a fever, was achy.<br></br>
 "One morning, he had a super-high fever, and we called an ambulance."<br></br>
 DeMarco was taken to a local hospital, then transferred to the VA Medical Center in Fayetteville where he died. Tony DeMarco said he and his wife, both 66, are back in Idaho and mostly recovered.<br></br>
-      </article>
-    </section>
+</p>
+</div>
+</section>
 
 
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>John Louis Berry Sr.</h5>
-              <h4>68, Little Rock</h4>
-              <img src="John Louis Berry Sr..JPG" alt="Responsive image">
-            </div>
-      </figure>
-      <article>
-        <p>
-          The longtime Tulsa resident was disabled but could participate at his church, including singing in the male chorus, said his sister, Katherene Scott.<br></br>
-          He moved to Little Rock last year to be closer to family and deal with health issues that included diabetes. Before he contracted covid-19, he was living in his own apartment, and spending time with family and friends.<br></br>
-          The father of three came down with a gastrointestinal illness last month. "We figured it was a virus, not the virus," his sister said. She and her husband took Berry to the hospital Aug. 6. Health care workers said he had symptoms of covid-19, admitted him, and told family they would not be allowed to visit. He tested positive for covid-19 on Aug. 13, according to a coroner's report.<br></br>
-          "It was hard on the family because we couldn't see him, and hard because he couldn't see his family," Scott said.<br></br>
-          At Baptist Health Medical Center for more than two weeks, "he was doing pretty good at first, then in a couple of days didn't do so well, then pretty good." As he worsened again, Berry agreed to go on a ventilator, but went downhill, his sister said.<br></br>
-      </article>
-    </section>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+          <h5 id="JohnLouisBerrySr">John Louis Berry Sr.</h5>
+          <h4>68, Little Rock</h4>
+          <img src="John Louis Berry Sr..JPG" alt="Responsive image">
+        </div>
+    <p>
+      The longtime Tulsa resident was disabled but could participate at his church, including singing in the male chorus, said his sister, Katherene Scott.<br></br>
+      He moved to Little Rock last year to be closer to family and deal with health issues that included diabetes. Before he contracted covid-19, he was living in his own apartment, and spending time with family and friends.<br></br>
+      The father of three came down with a gastrointestinal illness last month. "We figured it was a virus, not the virus," his sister said. She and her husband took Berry to the hospital Aug. 6. Health care workers said he had symptoms of covid-19, admitted him, and told family they would not be allowed to visit. He tested positive for covid-19 on Aug. 13, according to a coroner's report.<br></br>
+      "It was hard on the family because we couldn't see him, and hard because he couldn't see his family," Scott said.<br></br>
+      At Baptist Health Medical Center for more than two weeks, "he was doing pretty good at first, then in a couple of days didn't do so well, then pretty good." As he worsened again, Berry agreed to go on a ventilator, but went downhill, his sister said.<br></br>
+    </p>
+  </div>
+</section>
 
-    <section>
-      <figure>
-            <div class="container">
-              <h5>Rosie Holmes</h5>
+<section>
+  <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+    <div class="nameimagecontainer">
+              <h5 id="RosieHolmes">Rosie Holmes</h5>
               <h4>89, Pine Bluff</h4>
               <img src="Rosie Holmes.JPG" alt="Responsive image">
             </div>
-      </figure>
-      <article>
         <p>
           The widow and mother of 10 loved gardening and fishing. She was fishing when she met her husband, according to a daughter, Sheila Holmes.<br></br>
           A churchgoer who read the Bible with her children, Holmes valued education and sent two children to a newly integrated school in Wabbaseka. "My mother wanted me to experience better," her daughter said.<br></br>
@@ -3386,19 +3440,16 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
           "She was 5-foot or 5-foot-1 little lady, but she had a lot of spunk, she did," her daughter said.<br></br>
           When covid-19 struck and visitors were barred from hospitals and long-term care facilities, family members rotated shifts to stand by Holmes' Jefferson County nursing home window to ensure she wasn't alone.<br></br>
           She couldn't speak, but when they shouted, "she would raise a finger to let us know that she knew we were there," her daughter said.<br></br>
-      </article>
     </section>
 
 
     <section>
-      <figure>
-            <div class="container">
-              <h5>Jimmy Horn</h5>
+        <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+          <div class="nameimagecontainer">
+            <h5 id="JimmyHorn">Jimmy Horn</h5>
               <h4>52, Eudora</h4>
               <img src="James Horn.JPG" alt="Responsive image">
             </div>
-      </figure>
-      <article>
         <p>
           Horn spent his life in southeast Arkansas, growing up in a town of fewer than 2,000 people just north of the Louisiana border.<br></br>
           He learned to hunt deer as a boy, a hobby he carried on throughout his life, according to his mother, Donnie Sue Horn. "He loved outside," fishing and hunting, his mother said. "He actually has -- I think it's four deer heads that he's mounted in his room. That's what's on his walls."<br></br>
@@ -3408,19 +3459,16 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
           After both were hospitalized, he struggled to breathe.<br></br>
           "All I can think is that Jimmy was a Christian, and I have always known that God's in control. I think he did this just so that -- maybe it was his way of helping me cope with [Jimmy's] death," his mother said. "It's just like my heart has been torn out."<br></br>
           After her son died, Donnie Sue Horn still faced a lengthy battle with covid-19 infection. After her first hospital release, she was readmitted Sept. 29 with blood clots developed as a result of the virus, she said. She was released again Oct. 2.<br></br>
-      </article>
     </section>
 
 
     <section>
-      <figure>
-            <div class="container">
-              <h5>Dorothy Henderson</h5>
+      <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+        <div class="nameimagecontainer">
+              <h5 id="DorothyHenderson">Dorothy Henderson</h5>
               <h4>73, Little Rock</h4>
               <img src="Dorothy Henderson.JPG" alt="Responsive image">
             </div>
-      </figure>
-      <article>
         <p>
           When she retired as a Quality Foods warehouse worker, Henderson decided to start volunteering.<br></br>
           She signed up to work for North Little Rock's Hays Senior Center, where she already enjoyed exercising. She also volunteered with AARP and began traveling with those groups, visiting Hawaii, the Bahamas and other spots, her husband Reginald Henderson said.<br></br>
@@ -3433,14 +3481,12 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
     </section>
 
     <section>
-      <figure>
-            <div class="container">
-              <h5>Rev. Robert Floyd Jr.</h5>
+      <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+        <div class="nameimagecontainer">
+              <h5 id="RobertFloyd">Rev. Robert Floyd Jr.</h5>
               <h4>67, Little Rock</h4>
               <img src="Robert Floyd.JPG" alt="Responsive image">
             </div>
-      </figure>
-      <article>
         <p>
           A longtime Baptist preacher, Floyd served in churches throughout Central Arkansas, according to his wife, Jewell Floyd. For 25 years, he was pastor at Greater Unity Missionary Baptist Church in North Little Rock.<br></br>
           Away from church work, "he liked fishing, but we didn't do it often," his wife said. "He liked basketball. He coached and he played when he was young."<br></br>
@@ -3454,14 +3500,12 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
 
 
     <section>
-      <figure>
-            <div class="container">
-              <h5>Elizabeth Hendricks</h5>
+      <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+        <div class="nameimagecontainer">
+              <h5 id="ElizabethHendricks">Elizabeth Hendricks</h5>
               <h4>68, El Dorado</h4>
               <img src="Elizabeth Hendricks.JPG" alt="Responsive image">
             </div>
-      </figure>
-      <article>
         <p>
           She majored in French at Northeast Louisiana University, studied in Paris in 1972, graduated a year later and began spreading her love for the French language and culture to public school students in El Dorado.<br></br>
           For years, Hendricks was the only French teacher in Union County's public schools.<br></br>
@@ -3475,14 +3519,12 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
 
 
     <section>
-      <figure>
-            <div class="container">
-              <h5>Mary Ruth "Sissy" House</h5>
+      <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+        <div class="nameimagecontainer">
+              <h5 id="MaryRuthHouse">Mary Ruth "Sissy" House</h5>
               <h4>64, Cabot</h4>
               <img src="house.JPG" alt="Responsive image">
             </div>
-      </figure>
-      <article>
         <p>
           She worked "one to two jobs her entire life" to provide for herself and her child, said son Steve Jernigan. She plastered pictures of her two grandchildren, ages 8 and 6, through her work space.<br></br>
           An employee of the Arkansas Division of Workforce Services, House probably contracted the virus at work, he said, because co-workers on her floor also became ill.<br></br>
@@ -3496,14 +3538,12 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
 
 
     <section>
-      <figure>
-            <div class="container">
-              <h5>Linda Joyce Pledger</h5>
+      <div class="container" data-aos="fade-in" data-aos-anchor-placement="top-center" data-aos-duration="1000">
+        <div class="nameimagecontainer">
+              <h5 id="LindaJoycePledger">Linda Joyce Pledger</h5>
               <h4>77, Lonoke</h4>
               <img src="Linda Joyce Pledger.JPG" alt="Responsive image">
             </div>
-      </figure>
-      <article>
         <p>
           After retiring in 2013 after losing her husband, Pledger decided she "couldn't sit still," according to daughter Renee Haynes.<br></br>
           So she signed on for classes to become a certified nursing assistant and went to work at a nursing home.<br></br>
@@ -3562,6 +3602,7 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
 
     <script type="text/javascript">
 
@@ -3660,6 +3701,86 @@ DeMarco was taken to a local hospital, then transferred to the VA Medical Center
           });
       });
 
+
+      $(document).ready(function() {
+          $('.js-example-basic-multiple').select2({
+            placeholder: "Please select a name",
+            allowClear: true,
+            theme: "classic",
+            tags: true,
+            multiple: false,
+            createTag: function (params) {
+              return null;
+            },
+          }).on('select2:select', function(){
+    switch($(this).val())
+    {
+        case 'Roy Junior (RJ) Blackburn':
+            location.href = '#rj';
+            break;
+        case 'Violet Lawson':
+            location.href = '#violetlawson';
+            break;
+        case 'Juan Palacios':
+            location.href = '#JuanPalacios';
+            break;
+        case 'John Dillon':
+            location.href = '#JohnDillon';
+            break;
+        case 'Clint Watson II':
+            location.href = '#ClintWatsonII';
+            break;
+        case 'Mack Giles Sr.':
+            location.href = '#MackGilesSr';
+            break;
+        case 'Roy Lee':
+            location.href = '#RoyLee';
+            break;
+        case 'Joyah Flemister':
+            location.href = '#JoyahFlemister';
+            break;
+        case 'Ellen Ford':
+            location.href = '#EllenFord';
+            break;
+        case 'Bruce Hutcheson':
+            location.href = '#BruceHutcheson';
+            break;
+        case 'Ester Simpkins':
+            location.href = '#EsterSimpkins';
+            break;
+        case 'Charles Sibley':
+            location.href = '#CharlesSibley';
+            break;
+        case 'Albert DeMarcos':
+            location.href = '#AlbertDeMarco';
+            break;
+        case 'John Louis Berry Sr.':
+            location.href = '#JohnLouisBerrySr';
+            break;
+        case 'Rosie Holmes':
+            location.href = '#RosieHolmes';
+            break;
+        case 'Jimmy Horn':
+            location.href = '#JimmyHorn';
+            break;
+        case 'Dorothy Henderson':
+            location.href = '#DorothyHenderson';
+            break;
+        case 'Rev. Robert Floyd Jr.':
+            location.href = '#RobertFloyd';
+            break;
+        case 'Elizabeth Hendricks':
+            location.href = '#ElizabethHendricks';
+            break;
+        case 'Mary Ruth House':
+            location.href = '#MaryRuthHouse';
+            break;
+        case 'Linda Joyce Pledger':
+            location.href = '#LindaJoycePledger';
+            break;
+    }
+    });
+      });
     </script>
 
 
